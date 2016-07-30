@@ -15,3 +15,4 @@ dist/
 downloads/
 test_results/
 tmp/
+venv_gitbash/
