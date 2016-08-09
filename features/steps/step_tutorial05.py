@@ -50,9 +50,11 @@ def step_impl(context):
     if not frobulator:
         context.frobulator = Frobulator()
     context.frobulator.text = context.text  #< STEP-DATA from context.text
+    print('.....'+context.text+'_____')
 
 @when('we activate the frobulator')
 def step_impl(context):
+    print('.....'+context.text+'_____')
     context.frobulator.activate()
 
 @then('we will find it similar to {language}')

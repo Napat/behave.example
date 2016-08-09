@@ -25,6 +25,8 @@ from hamcrest import assert_that, equal_to
 from testutil import NamedNumber
 from company_model import CompanyModel
 
+from pprint import pprint
+
 @given('a set of specific users')
 def step_impl(context):
     model = getattr(context, "model", None)
@@ -32,9 +34,12 @@ def step_impl(context):
         context.model = CompanyModel()
     for row in context.table:
         context.model.add_user(row["name"], deparment=row["department"])
+        pprint(row)
+        print(row["name"]+' : '+row["department"])
 
 @when('we count the number of people in each department')
 def step_impl(context):
+    print(type(context.table))
     context.model.count_persons_per_department()
 
 @then('we will find {count} people in "{department}"')

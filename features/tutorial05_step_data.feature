@@ -1,10 +1,13 @@
 Feature: Step Data (tutorial05)
 
    Scenario: Some scenario
-     Given a sample text loaded into the frobulator:
+    Given a sample text loaded into the frobulator:
         """
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua.
         """
-    When we activate the frobulator
+    When we activate the frobulator:
+        """
+        test1234567890
+        """
     Then we will find it similar to English

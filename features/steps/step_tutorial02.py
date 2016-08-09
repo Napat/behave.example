@@ -85,3 +85,4 @@ def step_the_ninja_encounters_another_opponent(context):
         # -- VERIFY: Double-call does not occur.
         assert_that(context.ninja_fight, is_not(equal_to(None)))
     context.ninja_fight = None
+    print('... BACKGROUND ...')
